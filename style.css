@@ -1,0 +1,123 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(60deg, rgba(0,0,0,1) 34%, rgba(29,146,222,1) 100%);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    object-fit: cover;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.2rem;
+}
+
+.carousel {
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    
+}
+
+.slide {
+    width: min(300px, 100%);
+    height: 300px;
+    border-radius: 1.2rem;
+}
+
+.container {
+    padding-inline: 20px;
+    padding-block: 20px;
+    width: min( var(--max-width), 100%);
+    background-color: rgb(124, 124, 212);
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    overflow-y: hidden;
+    scrollbar-width: none;
+    border-radius: 1.2rem;
+}
+
+.last-img {
+    margin-right: 20px;
+}
+
+.slides-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, min(300px, 100%));
+    gap: 20px;
+}
+
+ion-icon {
+    padding: 10px;
+    background-color: white;
+    font-size: 1rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: black;
+}
+
+.btn:hover {
+    background-color: #7e7b7e;
+    color: white;
+}
+
+.slider-btns {
+    display: flex;
+    gap: 20px;
+}
+
+@media (min-width: 1120px) {
+    .container {
+      width: 1100px;
+    }
+}
+
+@media (min-width: 830px) { 
+    .container {
+      --max-width: 830px;
+    }
+
+    .slide {
+      width: min(250px, 100%);
+      height: 250px;
+      border-radius: 1.2rem;
+    }
+
+    .slides-wrapper {
+        grid-template-columns: repeat(6, min(250px, 100%));
+    }
+}
+
+@media (max-width:830px) {
+    .container {
+      --max-width: 560px;
+    }
+
+    .slides-wrapper {
+        grid-template-columns: repeat(6, min(250px, 100%));
+    }
+
+    .slide {
+    width: min(250px, 100%);
+    height: 250px;
+    border-radius: 1.2rem;
+    }
+    
+}
+
+
+@media (max-width:600px) {
+    .container {
+    --max-width: 270px;
+    }
+
+    
+}
+
